@@ -1,10 +1,10 @@
 import { useContext } from 'react'
-import { HiOutlineClipboardCopy } from 'react-icons/hi'
+import { HiAdjustments, HiOutlineClipboardCopy } from 'react-icons/hi'
 import { GlobalContext } from '../../context/GlobalState'
 
 export default function DarkOnly() {
   const { state, dispatch } = useContext(GlobalContext)
-  const { color, fontWeight, paddingY, paddingX, rounded } = state
+  const { color, fontWeight, paddingY, paddingX, rounded, padding } = state
   return (
     <section className="mx-auto max-w-screen-lg p-2">
       <header>
@@ -13,7 +13,7 @@ export default function DarkOnly() {
       <div className="table mx-auto rounded shadow-md overflow-hidden border-2 mt-5">
         <header className="table-header-group">
           <section className="table-row">
-            <div className="py-1 px-4 table-cell text-center">State</div>
+            <div className="py-1 px-4 table-cell text-center">Type</div>
             <div className="py-1 px-4 table-cell text-center ">
               <div className="grid justify-items-center">
                 <button
@@ -57,7 +57,7 @@ export default function DarkOnly() {
         </header>
         <div className="table-row-group">
           <section className="table-row">
-            <div className="py-1 px-4 table-cell align-middle">Default</div>
+            <div className="py-1 px-4 table-cell align-middle">Text</div>
             <div className="py-1 px-4 table-cell align-middle">
               <div className="grid justify-items-center">
                 <button
@@ -78,7 +78,7 @@ export default function DarkOnly() {
                   aria-label="Close"
                   className={`focus:outline-none transition focus:ring border-2 ${fontWeight} ${paddingX} ${paddingY} ${rounded} ${
                     color
-                      ? `border-${color}-300 text-${color}-800 hover:bg-${color}-800 hover:text-${color}-50 focus:ring-${color}-500 focus:bg-${color}-900`
+                      ? `border-${color}-300 text-${color}-800 hover:bg-${color}-800 hover:text-${color}-50 focus:ring-${color}-500 focus:bg-${color}-900 focus:text-${color}-50`
                       : 'border-blue-300 text-blue-800 hover:bg-blue-800 hover:text-blue-50 focus:ring-blue-500 focus:bg-blue-900'
                   }`}
                 >
@@ -92,7 +92,7 @@ export default function DarkOnly() {
                   aria-label="Close"
                   className={`focus:outline-none transition focus:ring ${fontWeight} ${paddingX} ${paddingY} ${rounded} ${
                     color
-                      ? `text-${color}-800 hover:bg-${color}-800 hover:text-${color}-50 focus:ring-${color}-500 focus:bg-${color}-900`
+                      ? `text-${color}-800 hover:bg-${color}-800 hover:text-${color}-50 focus:ring-${color}-500 focus:bg-${color}-900  focus:text-${color}-50`
                       : 'text-blue-800 hover:bg-blue-800 hover:text-blue-50 focus:ring-blue-500 focus:bg-blue-900'
                   }`}
                 >
@@ -102,18 +102,18 @@ export default function DarkOnly() {
             </div>
           </section>
           <section className="table-row">
-            <div className="py-1 px-4 table-cell align-middle">Hover</div>
+            <div className="py-1 px-4 table-cell align-middle">SVG</div>
             <div className="py-1 px-4 table-cell align-middle">
               <div className="grid justify-items-center">
                 <button
                   aria-label="Close"
-                  className={`focus:outline-none transition focus:ring ${fontWeight} ${paddingX} ${paddingY} ${rounded} ${
+                  className={`focus:outline-none transition focus:ring ${padding} ${rounded} ${
                     color
-                      ? `text-${color}-100 bg-${color}-800 focus:ring-${color}-500 focus:bg-${color}-900`
-                      : 'text-blue-100 bg-blue-800 focus:ring-blue-500 focus:bg-blue-900'
+                      ? `bg-${color}-900 text-${color}-50 hover:bg-${color}-800 focus:ring-${color}-500 focus:bg-${color}-900 focus:text-${color}-50`
+                      : 'bg-blue-900 text-blue-50 hover:bg-blue-800 focus:ring-blue-500 focus:bg-blue-900'
                   }`}
                 >
-                  Button
+                  <HiAdjustments className="h-5 w-5" />
                 </button>
               </div>
             </div>
@@ -121,13 +121,13 @@ export default function DarkOnly() {
               <div className="grid justify-items-center">
                 <button
                   aria-label="Close"
-                  className={`focus:outline-none transition focus:ring border-2 ${fontWeight} ${paddingX} ${paddingY} ${rounded} ${
+                  className={`focus:outline-none transition focus:ring border-2 ${padding} ${rounded} ${
                     color
-                      ? `border-${color}-300 text-${color}-100 bg-${color}-800 focus:ring-${color}-500 focus:bg-${color}-900`
-                      : 'border-blue-300 text-blue-100 bg-blue-800 focus:ring-blue-500 focus:bg-blue-900'
+                      ? `border-${color}-300 text-${color}-800 hover:bg-${color}-800 hover:text-${color}-50 focus:ring-${color}-500 focus:bg-${color}-900 focus:text-${color}-50`
+                      : 'border-blue-300 text-blue-800 hover:bg-blue-800 hover:text-blue-50 focus:ring-blue-500 focus:bg-blue-900'
                   }`}
                 >
-                  Button
+                  <HiAdjustments className="h-5 w-5" />
                 </button>
               </div>
             </div>
@@ -135,101 +135,13 @@ export default function DarkOnly() {
               <div className="grid justify-items-center">
                 <button
                   aria-label="Close"
-                  className={`focus:outline-none transition focus:ring ${fontWeight} ${paddingX} ${paddingY} ${rounded} ${
+                  className={`focus:outline-none transition focus:ring ${padding} ${rounded} ${
                     color
-                      ? `text-${color}-100 bg-${color}-800 focus:ring-${color}-500 focus:bg-${color}-900`
-                      : 'text-blue-100 bg-blue-800 focus:ring-blue-500 focus:bg-blue-900'
+                      ? `text-${color}-800 hover:bg-${color}-800 hover:text-${color}-50 focus:ring-${color}-500 focus:bg-${color}-900 focus:text-${color}-50`
+                      : 'text-blue-800 hover:bg-blue-800 hover:text-blue-50 focus:ring-blue-500 focus:bg-blue-900'
                   }`}
                 >
-                  Button
-                </button>
-              </div>
-            </div>
-          </section>
-          <section className="table-row">
-            <div className="py-1 px-4 table-cell align-middle">Focus</div>
-            <div className="py-1 px-4 table-cell align-middle">
-              <div className="grid justify-items-center">
-                <button
-                  aria-label="Close"
-                  className={`focus:outline-none transition focus:ring ${fontWeight} ${paddingX} ${paddingY} ${rounded} ${
-                    color
-                      ? `text-${color}-100 ring-${color}-500 bg-${color}-900`
-                      : 'text-blue-100 ring-blue-500 bg-blue-900'
-                  }`}
-                >
-                  Button
-                </button>
-              </div>
-            </div>
-            <div className="py-1 px-4 table-cell align-middle">
-              <div className="grid justify-items-center">
-                <button
-                  aria-label="Close"
-                  className={`focus:outline-none transition focus:ring border-2 ${fontWeight} ${paddingX} ${paddingY} ${rounded} ${
-                    color
-                      ? `border-${color}-300 text-${color}-100 ring-${color}-500 bg-${color}-900`
-                      : 'border-blue-300 text-blue-100 ring-blue-500 bg-blue-900'
-                  }`}
-                >
-                  Button
-                </button>
-              </div>
-            </div>
-            <div className="py-1 px-4 table-cell align-middle">
-              <div className="grid justify-items-center">
-                <button
-                  aria-label="Close"
-                  className={`focus:outline-none transition focus:ring ${fontWeight} ${paddingX} ${paddingY} ${rounded} ${
-                    color
-                      ? `text-${color}-100 ring-${color}-500 bg-${color}-900`
-                      : 'text-blue-100 ring-blue-500 bg-blue-900'
-                  }`}
-                >
-                  Button
-                </button>
-              </div>
-            </div>
-          </section>
-          <section className="table-row">
-            <div className="py-1 px-4 table-cell align-middle">Disabled</div>
-            <div className="py-1 px-4 table-cell align-middle">
-              <div className="grid justify-items-center">
-                <button
-                  aria-label="Close"
-                  className={`focus:outline-none opacity-50 cursor-not-allowed ${fontWeight} ${paddingX} ${paddingY} ${rounded} ${
-                    color
-                      ? `bg-${color}-900 text-${color}-50`
-                      : 'bg-blue-900 text-blue-50'
-                  }`}
-                >
-                  Button
-                </button>
-              </div>
-            </div>
-            <div className="py-1 px-4 table-cell align-middle">
-              <div className="grid justify-items-center">
-                <button
-                  aria-label="Close"
-                  className={`focus:outline-none opacity-50 cursor-not-allowed border-2 ${fontWeight} ${paddingX} ${paddingY} ${rounded} ${
-                    color
-                      ? `border-${color}-300 text-${color}-800`
-                      : 'border-blue-300 text-blue-800'
-                  }`}
-                >
-                  Button
-                </button>
-              </div>
-            </div>
-            <div className="py-1 px-4 table-cell align-middle">
-              <div className="grid justify-items-center">
-                <button
-                  aria-label="Close"
-                  className={`focus:outline-none opacity-50 cursor-not-allowed ${fontWeight} ${paddingX} ${paddingY} ${rounded} ${
-                    color ? `text-${color}-800` : 'text-blue-800'
-                  }`}
-                >
-                  Button
+                  <HiAdjustments className="h-5 w-5" />
                 </button>
               </div>
             </div>

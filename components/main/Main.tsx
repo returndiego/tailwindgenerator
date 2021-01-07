@@ -5,13 +5,9 @@ import PaddingXSelector from './PaddingXSelector'
 import PaddingSelector from './PaddingSelector'
 import FontWeightSelector from './FontWeightSelector'
 import LightOnly from './LightOnly'
-import LightOnlySVG from './LightOnlySVG'
 import DarkOnly from './DarkOnly'
-import DarkOnlySVG from './DarkOnlySVG'
 import LightOnLightDarkOnDark from './LightOnLightDarkOnDark'
-import LightOnLightDarkOnDarkSVG from './LightOnLightDarkOnDarkSVG'
 import DarkOnLightLightOnDark from './DarkOnLightLightOnDark'
-import DarkOnLightLightOnDarkSVG from './DarkOnLightLightOnDarkSVG'
 
 export default function Main() {
   return (
@@ -26,31 +22,10 @@ export default function Main() {
           <FontWeightSelector />
         </section>
       </div>
-
-      <div className="mx-auto max-w-screen-xl">
-        <section className="grid gap-6 lg:grid-cols-2">
-          <LightOnly />
-          <LightOnlySVG />
-        </section>
-      </div>
-      <div className="mx-auto max-w-screen-xl">
-        <section className="grid gap-6 lg:grid-cols-2">
-          <DarkOnly />
-          <DarkOnlySVG />
-        </section>
-      </div>
-      <div className="mx-auto max-w-screen-xl">
-        <section className="grid gap-6 lg:grid-cols-2">
-          <LightOnLightDarkOnDark />
-          <LightOnLightDarkOnDarkSVG />
-        </section>
-      </div>
-      <div className="mx-auto max-w-screen-xl">
-        <section className="grid gap-6 lg:grid-cols-2">
-          <DarkOnLightLightOnDark />
-          <DarkOnLightLightOnDarkSVG />
-        </section>
-      </div>
+      <LightOnly />
+      <DarkOnly />
+      <LightOnLightDarkOnDark />
+      <DarkOnLightLightOnDark />
     </main>
   )
 }
