@@ -11,6 +11,7 @@ export type Actions = {
     | 'PADDING_X'
     | 'PADDING'
     | 'FONT_WEIGHT'
+    | 'CLIPBOARD'
   payload?: string
 }
 

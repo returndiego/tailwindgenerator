@@ -16,20 +16,41 @@ import DarkOnLightLightOnDarkSVG from './DarkOnLightLightOnDarkSVG'
 export default function Main() {
   return (
     <main>
-      <ColorSelector />
-      <RoundedSelector />
-      <PaddingYSelector />
-      <PaddingXSelector />
-      <PaddingSelector />
-      <FontWeightSelector />
-      <LightOnly />
-      <LightOnlySVG />
-      <DarkOnly />
-      <DarkOnlySVG />
-      <LightOnLightDarkOnDark />
-      <LightOnLightDarkOnDarkSVG />
-      <DarkOnLightLightOnDark />
-      <DarkOnLightLightOnDarkSVG />
+      <div className="mx-auto max-w-screen-xl p-2">
+        <section className="grid gap-6 grid-cols-7">
+          <ColorSelector />
+          <RoundedSelector />
+          <PaddingYSelector />
+          <PaddingXSelector />
+          <PaddingSelector />
+          <FontWeightSelector />
+        </section>
+      </div>
+
+      <div className="mx-auto max-w-screen-xl">
+        <section className="grid gap-6 lg:grid-cols-2">
+          <LightOnly />
+          <LightOnlySVG />
+        </section>
+      </div>
+      <div className="mx-auto max-w-screen-xl">
+        <section className="grid gap-6 lg:grid-cols-2">
+          <DarkOnly />
+          <DarkOnlySVG />
+        </section>
+      </div>
+      <div className="mx-auto max-w-screen-xl">
+        <section className="grid gap-6 lg:grid-cols-2">
+          <LightOnLightDarkOnDark />
+          <LightOnLightDarkOnDarkSVG />
+        </section>
+      </div>
+      <div className="mx-auto max-w-screen-xl">
+        <section className="grid gap-6 lg:grid-cols-2">
+          <DarkOnLightLightOnDark />
+          <DarkOnLightLightOnDarkSVG />
+        </section>
+      </div>
     </main>
   )
 }

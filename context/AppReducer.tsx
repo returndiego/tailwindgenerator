@@ -18,6 +18,9 @@ export default function AppReducer(state: State, action: any) {
       return { ...state, fontSize: action.payload }
     case 'FONT_WEIGHT':
       return { ...state, fontWeight: action.payload }
+    case 'CLIPBOARD':
+      console.log('Implement copy to clipboard')
+      return state
     default:
       return state
   }

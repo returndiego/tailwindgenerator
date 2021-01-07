@@ -1,24 +1,60 @@
 import { useContext } from 'react'
 import { GlobalContext } from '../../context/GlobalState'
-import { HiAdjustments } from 'react-icons/hi'
+import { HiAdjustments, HiOutlineClipboardCopy } from 'react-icons/hi'
 
 export default function LightOnDarkDarkOnLightSVG() {
-  const { state } = useContext(GlobalContext)
+  const { state, dispatch } = useContext(GlobalContext)
   const { color, padding, rounded } = state
   return (
     <section className="mx-auto max-w-screen-lg p-2">
       <header>
         <h1 className="text-lg font-bold">
-          Dark on Light Theme Only, Light on Dark Theme (SVG)
+          Dark on Light Theme, Light on Dark Theme (SVG)
         </h1>
       </header>
-      <div className="table mx-auto rounded shadow-md overflow-hidden">
+      <div className="table mx-auto rounded shadow-md overflow-hidden border-2 mt-5">
         <header className="table-header-group">
-          <section className="table-row bg-purple-300 dark:bg-blue-700">
+          <section className="table-row">
             <div className="py-1 px-4 table-cell text-center">State</div>
-            <div className="py-1 px-4 table-cell text-center">Fill</div>
-            <div className="py-1 px-4 table-cell text-center">Outline</div>
-            <div className="py-1 px-4 table-cell text-center">Ghost</div>
+            <div className="py-1 px-4 table-cell text-center ">
+              <div className="grid justify-items-center">
+                <button
+                  className="flex gap-2 items-center font-semibold"
+                  onClick={() =>
+                    dispatch({ type: 'CLIPBOARD', payload: 'TODO' })
+                  }
+                >
+                  <p>Fill</p>
+                  <HiOutlineClipboardCopy className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+            <div className="py-1 px-4 table-cell text-center">
+              <div className="grid justify-items-center">
+                <button
+                  className="flex gap-2 items-center font-semibold"
+                  onClick={() =>
+                    dispatch({ type: 'CLIPBOARD', payload: 'TODO' })
+                  }
+                >
+                  <p>Outline</p>
+                  <HiOutlineClipboardCopy className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+            <div className="py-1 px-4 table-cell text-center">
+              <div className="grid justify-items-center">
+                <button
+                  className="flex gap-2 items-center font-semibold"
+                  onClick={() =>
+                    dispatch({ type: 'CLIPBOARD', payload: 'TODO' })
+                  }
+                >
+                  <p>Ghost</p>
+                  <HiOutlineClipboardCopy className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
           </section>
         </header>
         <div className="table-row-group">
