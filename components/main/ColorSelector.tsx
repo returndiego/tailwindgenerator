@@ -6,7 +6,7 @@ export default function ColorSelector() {
   const { color } = state
 
   return (
-    <section className="mx-auto max-w-screen-lg p-2 col-span-2">
+    <section className="mx-auto max-w-screen-lg p-2">
       <header>
         <h1 className="text-lg font-bold">Color Selector</h1>
       </header>

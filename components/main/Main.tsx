@@ -22,14 +22,16 @@ export default function Main() {
         </p>
       </header>
       <div className="mx-auto max-w-screen-xl p-2">
-        <section className="grid gap-6 sm:grid-cols-3 lg:grid-cols-4">
+        <section className="grid gap-6 md:grid-cols-2">
           <ColorSelector />
-          <BorderSelector />
-          <RoundedSelector />
-          <PaddingYSelector />
-          <PaddingXSelector />
-          <PaddingSelector />
-          <FontWeightSelector />
+          <div className="space-y-4 max-w-sm">
+            <BorderSelector />
+            <RoundedSelector />
+            <PaddingYSelector />
+            <PaddingXSelector />
+            <PaddingSelector />
+            <FontWeightSelector />
+          </div>
         </section>
       </div>
       <div className="grid lg:grid-cols-2">
