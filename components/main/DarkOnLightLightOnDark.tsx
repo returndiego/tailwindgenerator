@@ -5,11 +5,19 @@ import CopyToClipbaord from './CopyToClipboard'
 
 export default function LightOnDarkDarkOnLight() {
   const { state } = useContext(GlobalContext)
-  const { color, fontWeight, paddingY, paddingX, rounded, padding } = state
+  const {
+    color,
+    fontWeight,
+    paddingY,
+    paddingX,
+    rounded,
+    padding,
+    textTransform,
+  } = state
 
-  const fillTextButton = `transition focus:ring focus:outline-none ${fontWeight} ${paddingX} ${paddingY} ${rounded} dark:bg-${color}-200 dark:text-${color}-900 bg-${color}-900 text-${color}-50 dark:hover:bg-${color}-100 hover:bg-${color}-800 focus:ring-${color}-500 dark:focus:bg-${color}-200 focus:bg-${color}-900`
-  const OutlineTextButton = `transition focus:ring focus:outline-none border-2 ${fontWeight} ${paddingX} ${paddingY} ${rounded} text-${color}-900 dark:border-${color}-600 border-${color}-300 dark:text-${color}-100 dark:hover:bg-${color}-100 hover:bg-${color}-800 dark:hover:text-${color}-900 hover:text-${color}-100 focus:ring-${color}-500 dark:focus:bg-${color}-200 dark:focus:text-${color}-900 focus:text-${color}-100 focus:bg-${color}-900`
-  const GhostTextButton = `transition focus:ring focus:outline-none ${fontWeight} ${paddingX} ${paddingY} ${rounded} text-${color}-900 dark:text-${color}-100 dark:hover:bg-${color}-100 hover:bg-${color}-800 dark:hover:text-${color}-900 hover:text-${color}-100 focus:ring-${color}-500 dark:focus:bg-${color}-200 dark:focus:text-${color}-900 focus:text-${color}-100 focus:bg-${color}-900`
+  const fillTextButton = `select-none transition focus:ring focus:outline-none ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} dark:bg-${color}-200 dark:text-${color}-900 bg-${color}-900 text-${color}-50 dark:hover:bg-${color}-100 hover:bg-${color}-800 focus:ring-${color}-500 dark:focus:bg-${color}-200 focus:bg-${color}-900`
+  const OutlineTextButton = `select-none transition focus:ring focus:outline-none border-2 ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} text-${color}-900 dark:border-${color}-600 border-${color}-300 dark:text-${color}-100 dark:hover:bg-${color}-100 hover:bg-${color}-800 dark:hover:text-${color}-900 hover:text-${color}-100 focus:ring-${color}-500 dark:focus:bg-${color}-200 dark:focus:text-${color}-900 focus:text-${color}-100 focus:bg-${color}-900`
+  const GhostTextButton = `select-none transition focus:ring focus:outline-none ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} text-${color}-900 dark:text-${color}-100 dark:hover:bg-${color}-100 hover:bg-${color}-800 dark:hover:text-${color}-900 hover:text-${color}-100 focus:ring-${color}-500 dark:focus:bg-${color}-200 dark:focus:text-${color}-900 focus:text-${color}-100 focus:bg-${color}-900`
 
   const fillSVGButton = `transition focus:ring focus:outline-none ${padding} ${rounded} dark:bg-${color}-200 dark:text-${color}-900 bg-${color}-900 text-${color}-50 dark:hover:bg-${color}-100 hover:bg-${color}-800 focus:ring-${color}-500 dark:focus:bg-${color}-200 focus:bg-${color}-900`
   const OutlineSVGButton = `transition focus:ring focus:outline-none border-2 ${padding} ${rounded} text-${color}-900 dark:border-${color}-600 border-${color}-300 dark:text-${color}-100 dark:hover:bg-${color}-100 hover:bg-${color}-800 dark:hover:text-${color}-900 hover:text-${color}-100 focus:ring-${color}-500 dark:focus:bg-${color}-200 dark:focus:text-${color}-900 focus:text-${color}-100 focus:bg-${color}-900`
@@ -28,23 +36,17 @@ export default function LightOnDarkDarkOnLight() {
             <div className="py-1 px-4 table-cell text-center">Type</div>
             <div className="py-1 px-4 table-cell text-center ">
               <div className="grid justify-items-center">
-                <button className="flex gap-2 items-center font-semibold">
-                  <p>Fill</p>
-                </button>
+                <p>Fill</p>
               </div>
             </div>
             <div className="py-1 px-4 table-cell text-center">
               <div className="grid justify-items-center">
-                <button className="flex gap-2 items-center font-semibold">
-                  <p>Outline</p>
-                </button>
+                <p>Outline</p>
               </div>
             </div>
             <div className="py-1 px-4 table-cell text-center">
               <div className="grid justify-items-center">
-                <button className="flex gap-2 items-center font-semibold">
-                  <p>Ghost</p>
-                </button>
+                <p>Ghost</p>
               </div>
             </div>
           </section>

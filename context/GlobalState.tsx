@@ -10,6 +10,7 @@ const initialState: State = {
   paddingX: 'px-3',
   paddingY: 'py-1',
   fontWeight: 'font-medium',
+  textTransform: 'normal-case',
 }
 
 // The global context becomes a single source of truth

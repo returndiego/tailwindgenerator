@@ -5,11 +5,19 @@ import CopyToClipbaord from './CopyToClipboard'
 
 export default function LightOnly() {
   const { state } = useContext(GlobalContext)
-  const { color, fontWeight, paddingY, paddingX, rounded, padding } = state
+  const {
+    color,
+    fontWeight,
+    paddingY,
+    paddingX,
+    rounded,
+    padding,
+    textTransform,
+  } = state
 
-  const fillTextButton = `transition focus:outline-none ${fontWeight} ${paddingX} ${paddingY} ${rounded} bg-${color}-200 text-${color}-900 focus:ring hover:bg-${color}-100 focus:ring-${color}-500 focus:bg-${color}-200`
-  const OutlineTextButton = `border-2 transition focus:outline-none focus:ring ${fontWeight} ${paddingX} ${paddingY} ${rounded} border-${color}-600 text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`
-  const GhostTextButton = `transition focus:outline-none focus:ring ${fontWeight} ${paddingX} ${paddingY} ${rounded} text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`
+  const fillTextButton = `select-none transition focus:outline-none ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} bg-${color}-200 text-${color}-900 focus:ring hover:bg-${color}-100 focus:ring-${color}-500 focus:bg-${color}-200`
+  const OutlineTextButton = `select-none border-2 transition focus:outline-none focus:ring ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} border-${color}-600 text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`
+  const GhostTextButton = `select-none transition focus:outline-none focus:ring ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`
 
   const fillSVGButton = `transition focus:outline-none ${padding} ${rounded} bg-${color}-200 text-${color}-900 focus:ring hover:bg-${color}-100 focus:ring-${color}-500 focus:bg-${color}-200`
   const OutlineSVGButton = `border-2 transition focus:outline-none focus:ring ${padding} ${rounded} border-${color}-600 text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`
@@ -26,23 +34,17 @@ export default function LightOnly() {
             <div className="py-1 px-4 table-cell text-center">Type</div>
             <div className="py-1 px-4 table-cell text-center ">
               <div className="grid justify-items-center">
-                <button className="flex gap-2 items-center font-semibold">
-                  <p>Fill</p>
-                </button>
+                <p>Fill</p>
               </div>
             </div>
             <div className="py-1 px-4 table-cell text-center">
               <div className="grid justify-items-center">
-                <button className="flex gap-2 items-center font-semibold">
-                  <p>Outline</p>
-                </button>
+                <p>Outline</p>
               </div>
             </div>
             <div className="py-1 px-4 table-cell text-center">
               <div className="grid justify-items-center">
-                <button className="flex gap-2 items-center font-semibold">
-                  <p>Ghost</p>
-                </button>
+                <p>Ghost</p>
               </div>
             </div>
           </section>

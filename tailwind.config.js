@@ -42,6 +42,10 @@ module.exports = {
     ],
     options: {
       safelist: [
+        'uppercase',
+        'lowercase',
+        'capitalize',
+        'normal-case',
         'font-thin',
         'font-light',
         'font-normal',

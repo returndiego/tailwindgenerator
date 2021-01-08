@@ -1,6 +1,7 @@
 import ColorSelector from './ColorSelector'
 import BorderSelector from './BorderSelector'
 import RoundedSelector from './RoundedSelector'
+import TextTransformSelector from './TextTransformSelector'
 import PaddingYSelector from './PaddingYSelector'
 import PaddingXSelector from './PaddingXSelector'
 import PaddingSelector from './PaddingSelector'
@@ -10,8 +11,43 @@ import DarkOnly from './DarkOnly'
 import LightOnLightDarkOnDark from './LightOnLightDarkOnDark'
 import DarkOnLightLightOnDark from './DarkOnLightLightOnDark'
 import Inputs from '../inputs/Inputs'
+import { useEffect } from 'react'
+import { useContext } from 'react'
+import { GlobalContext } from '../../context/GlobalState'
 
 export default function Main() {
+  const { dispatch } = useContext(GlobalContext)
+  const colors = [
+    'blueGray',
+    'coolGray',
+    'gray',
+    'trueGray',
+    'warmGray',
+    'red',
+    'orange',
+    'amber',
+    'yellow',
+    'lime',
+    'green',
+    'emerald',
+    'teal',
+    'cyan',
+    'lightBlue',
+    'blue',
+    'indigo',
+    'violet',
+    'purple',
+    'fuchsia',
+    'pink',
+    'rose',
+  ]
+  useEffect(() => {
+    dispatch({
+      type: 'COLOR',
+      payload: colors[Math.floor(Math.random() * colors.length)],
+    })
+  }, [])
+
   return (
     <main>
       <header className="mx-auto max-w-screen-lg p-2">
@@ -28,6 +64,7 @@ export default function Main() {
             <BorderSelector />
             <RoundedSelector />
             <PaddingYSelector />
+            <TextTransformSelector />
             <PaddingXSelector />
             <PaddingSelector />
             <FontWeightSelector />

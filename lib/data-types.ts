@@ -13,6 +13,7 @@ export type Actions = {
     | 'FONT_WEIGHT'
     | 'CLIPBOARD'
     | 'BORDER'
+    | 'TEXT_TRANSFORM'
   payload?: string
 }
 
@@ -58,6 +59,7 @@ export type State = {
     | 'font-semibold'
     | 'font-bold'
     | 'font-black'
+  textTransform: 'uppercase' | 'lowercase' | 'capitalize' | 'normal-case'
   paddingX:
     | 'px-0'
     | 'px-1'

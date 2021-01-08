@@ -14,6 +14,8 @@ export default function AppReducer(state: State, action: any) {
       return { ...state, padding: action.payload }
     case 'PADDING_Y':
       return { ...state, paddingY: action.payload }
+    case 'TEXT_TRANSFORM':
+      return { ...state, textTransform: action.payload }
     case 'FONT_SIZE':
       return { ...state, fontSize: action.payload }
     case 'FONT_WEIGHT':
