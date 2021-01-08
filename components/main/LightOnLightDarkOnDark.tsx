@@ -9,7 +9,7 @@ export default function LightOnLightDarkOnDark() {
     <section className="mx-auto max-w-screen-lg p-2">
       <header>
         <h1 className="text-lg font-bold">
-          Light on Light Theme, Dark on Dark Theme (Text)
+          Light on Light Theme, Dark on Dark Theme
         </h1>
       </header>
 

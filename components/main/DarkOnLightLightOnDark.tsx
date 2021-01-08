@@ -9,7 +9,7 @@ export default function LightOnDarkDarkOnLight() {
     <section className="mx-auto max-w-screen-lg p-2">
       <header>
         <h1 className="text-lg font-bold">
-          Dark on Light Theme, Light on Dark Theme (Text)
+          Dark on Light Theme, Light on Dark Theme
         </h1>
       </header>
       <div className="table mx-auto rounded shadow-md overflow-hidden border-2 mt-5">

@@ -29,19 +29,4 @@ export default function PaddingSelector() {
   )
 }
 
-const breakpoints = [
-  'p-px',
-  'p-0',
-  'p-0.5',
-  'p-1',
-  'p-1.5',
-  'p-2',
-  'p-2.5',
-  'p-3',
-  'p-3.5',
-  'p-4',
-  'p-5',
-  'p-6',
-  'p-7',
-  'p-8',
-]
+const breakpoints = ['p-0', 'p-1', 'p-2', 'p-3', 'p-4', 'p-5', 'p-6']

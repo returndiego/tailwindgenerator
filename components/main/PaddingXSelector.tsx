@@ -30,15 +30,10 @@ export default function PaddingXSelector() {
 }
 
 const breakpoints = [
-  'px-px',
   'px-0',
-  'px-0.5',
   'px-1',
-  'px-1.5',
   'px-2',
-  'px-2.5',
   'px-3',
-  'px-3.5',
   'px-4',
   'px-5',
   'px-6',

@@ -5,6 +5,7 @@ import AppReducer from './AppReducer'
 const initialState: State = {
   color: 'blue',
   rounded: 'rounded-md',
+  border: 'border',
   padding: 'p-1',
   paddingX: 'px-3',
   paddingY: 'py-1',

@@ -1,0 +1,133 @@
+// [
+//   // LIGHT ONLY
+//   'bg-blue-200',
+//   'hover:bg-blue-100',
+//   'focus:bg-blue-200',
+//   'text-blue-900',
+//   'hover:text-blue-900',
+//   'focus:text-blue-900',
+//   'focus:ring-blue-500',
+//   'border-blue-600',
+//   // 'focus:ring',
+// ]
+// [
+//   // DARK ONLY
+//   'bg-blue-900',
+//   'hover:bg-blue-800',
+//   'focus:bg-blue-900',
+//   'text-blue-50',
+//   'text-blue-800',
+//   'hover:text-blue-50',
+//   'focus:text-blue-50',
+//   'focus:ring-blue-500',
+//   'border-blue-300',
+// ]
+// [
+//   // DARK ON LIGHT
+//   'dark:bg-blue-200',
+//   'bg-blue-900',
+//   'dark:hover:bg-blue-100',
+//   'hover:bg-blue-800',
+//   'dark:focus:bg-blue-200',
+//   'focus:bg-blue-900',
+//   'dark:text-blue-900',
+//   'text-blue-50',
+//   'text-blue-900',
+//   'dark:text-blue-100',
+//   'dark:hover:text-blue-900',
+//   'hover:text-blue-100',
+//   'dark:focus:text-blue-900',
+//   'focus:text-blue-100',
+//   'dark:border-blue-600',
+//   'focus:ring-blue-500',
+//   'border-blue-300',
+// ]
+
+// [
+//   // LIGHT ON LIGHT
+//   'bg-blue-200',
+//   'dark:bg-blue-900',
+//   'border-blue-600',
+//   'dark:border-blue-300',
+//   'text-blue-900',
+//   'dark:text-blue-50',
+//   'hover:bg-blue-100',
+//   'dark:hover:bg-blue-800',
+//   'focus:ring-blue-500',
+//   'focus:bg-blue-200',
+//   'dark:focus:bg-blue-900',
+// ]
+
+// [
+//     // LIGHT ONLY
+//   'bg-blue-200',
+//   'focus:bg-blue-200',
+//   'text-blue-900',
+//   'hover:text-blue-900',
+//   'focus:text-blue-900',
+//   'focus:ring-blue-500',
+//   'border-blue-600',
+//     // DARK ONLY
+//   'bg-blue-900',
+//   'hover:bg-blue-800',
+//   'focus:bg-blue-900',
+//   'text-blue-50',
+//   'text-blue-800',
+//   'hover:text-blue-50',
+//   'focus:text-blue-50',
+//   'border-blue-300',
+//     // DARK ON LIGHT
+//   'dark:bg-blue-200',
+//   'dark:hover:bg-blue-100',
+//   'dark:focus:bg-blue-200',
+//   'dark:text-blue-900',
+//   'dark:text-blue-100',
+//   'dark:hover:text-blue-900',
+//   'hover:text-blue-100',
+//   'dark:focus:text-blue-900',
+//   'focus:text-blue-100',
+//   'dark:border-blue-600',
+//     // LIGHT ON LIGHT
+//   'dark:bg-blue-900',
+//   'dark:border-blue-300',
+//   'dark:text-blue-50',
+//   'hover:bg-blue-100',
+//   'dark:hover:bg-blue-800',
+//   'dark:focus:bg-blue-900',
+// ]
+
+// [
+// 'bg-blue-200',
+// 'bg-blue-900',
+// 'text-blue-50',
+// 'text-blue-800',
+// 'text-blue-900',
+// 'border-blue-300',
+// 'border-blue-600',
+// 'hover:bg-blue-800',
+// 'hover:bg-blue-100',
+// 'hover:text-blue-50',
+// 'hover:text-blue-100',
+// 'hover:text-blue-900',
+// 'focus:bg-blue-200',
+// 'focus:bg-blue-900',
+// 'focus:text-blue-50',
+// 'focus:text-blue-100',
+// 'focus:text-blue-900',
+// 'focus:border-blue-700'
+// 'focus:ring-blue-500',
+// 'dark:bg-blue-200',
+// 'dark:bg-blue-900',
+// 'dark:text-blue-50',
+// 'dark:text-blue-100',
+// 'dark:text-blue-900',
+// 'dark:border-blue-600',
+// 'dark:border-blue-300',
+// 'dark:hover:bg-blue-100',
+// 'dark:hover:bg-blue-800',
+// 'dark:hover:text-blue-900',
+// 'dark:focus:bg-blue-200',
+// 'dark:focus:bg-blue-900',
+// 'dark:focus:text-blue-900',
+// 'dark:focus:border-blue-400'
+// ]

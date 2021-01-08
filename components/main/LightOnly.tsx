@@ -8,11 +8,11 @@ export default function LightOnly() {
   return (
     <section className="mx-auto max-w-screen-lg p-2">
       <header>
-        <h1 className="text-lg font-bold">Light Theme Only (Text)</h1>
+        <h1 className="text-lg font-bold">Light Only</h1>
       </header>
-      <div className="table mx-auto rounded shadow-md overflow-hidden border-2 mt-5">
+      <div className="table mx-auto rounded shadow-md overflow-hidden border-2 bg-gray-100 text-gray-900 mt-5">
         <header className="table-header-group">
-          <section className="table-row ">
+          <section className="table-row">
             <div className="py-1 px-4 table-cell text-center">Type</div>
             <div className="py-1 px-4 table-cell text-center ">
               <div className="grid justify-items-center">
@@ -62,11 +62,7 @@ export default function LightOnly() {
               <div className="grid justify-items-center">
                 <button
                   aria-label="Close"
-                  className={`transition focus:outline-none ${fontWeight} ${paddingX} ${paddingY} ${rounded} ${
-                    color
-                      ? `bg-${color}-200 text-${color}-900 focus:ring hover:bg-${color}-100 focus:ring-${color}-500 focus:bg-${color}-200`
-                      : 'bg-blue-200 text-blue-900 focus:ring hover:bg-blue-100 focus:ring-blue-500 focus:bg-blue-200'
-                  }`}
+                  className={`transition focus:outline-none ${fontWeight} ${paddingX} ${paddingY} ${rounded} bg-${color}-200 text-${color}-900 focus:ring hover:bg-${color}-100 focus:ring-${color}-500 focus:bg-${color}-200`}
                 >
                   Button
                 </button>
@@ -76,11 +72,7 @@ export default function LightOnly() {
               <div className="grid justify-items-center">
                 <button
                   aria-label="Close"
-                  className={`border-2 transition focus:outline-none focus:ring ${fontWeight} ${paddingX} ${paddingY} ${rounded} ${
-                    color
-                      ? `border-${color}-600 text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`
-                      : 'border-blue-600 text-blue-900 hover:bg-blue-100 hover:text-blue-900 focus:text-blue-900 focus:ring-blue-500 focus:bg-blue-200'
-                  }`}
+                  className={`border-2 transition focus:outline-none focus:ring ${fontWeight} ${paddingX} ${paddingY} ${rounded} border-${color}-600 text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`}
                 >
                   Button
                 </button>
@@ -90,11 +82,7 @@ export default function LightOnly() {
               <div className="grid justify-items-center">
                 <button
                   aria-label="Close"
-                  className={`transition focus:outline-none focus:ring ${fontWeight} ${paddingX} ${paddingY} ${rounded} ${
-                    color
-                      ? `text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`
-                      : 'text-blue-900 hover:bg-blue-100 hover:text-blue-900 focus:text-blue-900 focus:ring-blue-500 focus:bg-blue-200'
-                  }`}
+                  className={`transition focus:outline-none focus:ring ${fontWeight} ${paddingX} ${paddingY} ${rounded} text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`}
                 >
                   Button
                 </button>
@@ -107,11 +95,7 @@ export default function LightOnly() {
               <div className="grid justify-items-center">
                 <button
                   aria-label="Close"
-                  className={`transition focus:outline-none ${padding} ${rounded} ${
-                    color
-                      ? `bg-${color}-200 text-${color}-900 focus:ring hover:bg-${color}-100 focus:ring-${color}-500 focus:bg-${color}-200`
-                      : 'bg-blue-200 text-blue-900 focus:ring hover:bg-blue-100 focus:ring-blue-500 focus:bg-blue-200'
-                  }`}
+                  className={`transition focus:outline-none ${padding} ${rounded} bg-${color}-200 text-${color}-900 focus:ring hover:bg-${color}-100 focus:ring-${color}-500 focus:bg-${color}-200`}
                 >
                   <HiAdjustments className="h-5 w-5" />
                 </button>
@@ -121,11 +105,7 @@ export default function LightOnly() {
               <div className="grid justify-items-center">
                 <button
                   aria-label="Close"
-                  className={`border-2 transition focus:outline-none focus:ring ${padding} ${rounded} ${
-                    color
-                      ? `border-${color}-600 text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`
-                      : 'border-blue-600 text-blue-900 hover:bg-blue-100 hover:text-blue-900 focus:text-blue-900 focus:ring-blue-500 focus:bg-blue-200'
-                  }`}
+                  className={`border-2 transition focus:outline-none focus:ring ${padding} ${rounded} border-${color}-600 text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`}
                 >
                   <HiAdjustments className="h-5 w-5" />
                 </button>
@@ -135,11 +115,7 @@ export default function LightOnly() {
               <div className="grid justify-items-center">
                 <button
                   aria-label="Close"
-                  className={`transition focus:outline-none focus:ring ${padding} ${rounded} ${
-                    color
-                      ? `text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`
-                      : 'text-blue-900 hover:bg-blue-100 hover:text-blue-900 focus:text-blue-900 focus:ring-blue-500 focus:bg-blue-200'
-                  }`}
+                  className={`transition focus:outline-none focus:ring ${padding} ${rounded} text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`}
                 >
                   <HiAdjustments className="h-5 w-5" />
                 </button>
