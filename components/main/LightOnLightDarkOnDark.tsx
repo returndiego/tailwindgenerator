@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { HiCurrencyDollar } from 'react-icons/hi'
+import { HiCurrencyDollar, HiHeart, HiOutlineStar } from 'react-icons/hi'
 import { GlobalContext } from '../../context/GlobalState'
 import CopyToClipbaord from './CopyToClipboard'
 
@@ -15,13 +15,29 @@ export default function LightOnLightDarkOnDark() {
     textTransform,
   } = state
 
+  // ------------------- BUTTON (TEXT) ----------------------
   const fillTextButton = `select-none focus:outline-none focus:ring transition ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} bg-${color}-200 text-${color}-900 dark:bg-${color}-900 dark:text-${color}-50 hover:bg-${color}-100 dark:hover:bg-${color}-800 focus:ring-${color}-500 focus:bg-${color}-200 dark:focus:bg-${color}-900`
+
   const OutlineTextButton = `select-none focus:outline-none focus:ring transition border-2 ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} border-${color}-600 dark:border-${color}-300 text-${color}-900 dark:text-${color}-50 hover:bg-${color}-100 dark:hover:bg-${color}-800 focus:ring-${color}-500 focus:bg-${color}-200 dark:focus:bg-${color}-900`
+
   const GhostTextButton = `select-none focus:outline-none focus:ring transition ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} text-${color}-900 dark:text-${color}-50 hover:bg-${color}-100 dark:hover:bg-${color}-800 focus:ring-${color}-500 focus:bg-${color}-200 dark:focus:bg-${color}-900`
 
+  // ------------------- BUTTON (SVG) ----------------------
   const fillSVGButton = `focus:outline-none focus:ring transition ${padding} ${rounded} bg-${color}-200 text-${color}-900 dark:bg-${color}-900 dark:text-${color}-50 hover:bg-${color}-100 dark:hover:bg-${color}-800 focus:ring-${color}-500 focus:bg-${color}-200 dark:focus:bg-${color}-900`
+
   const OutlineSVGButton = `focus:outline-none focus:ring transition border-2 ${padding} ${rounded} border-${color}-600 dark:border-${color}-300 text-${color}-900 dark:text-${color}-50 hover:bg-${color}-100 dark:hover:bg-${color}-800 focus:ring-${color}-500 focus:bg-${color}-200 dark:focus:bg-${color}-900`
+
   const GhostSVGButton = `focus:outline-none focus:ring transition ${padding} ${rounded} text-${color}-900 dark:text-${color}-50 hover:bg-${color}-100 dark:hover:bg-${color}-800 focus:ring-${color}-500 focus:bg-${color}-200 dark:focus:bg-${color}-900`
+
+  // ------------------- LABEL (TEXT) ----------------------
+  const fillLabel = `select-none grid place-items-center text-sm ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} bg-${color}-200 text-${color}-900 dark:bg-${color}-900 dark:text-${color}-50`
+
+  const outlineLabel = `select-none grid place-items-center text-sm border-2 transition ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} border-${color}-600 text-${color}-800 dark:border-${color}-300 dark:text-${color}-50`
+
+  // ---------------- LABEL (TEXT & SVG) -------------------
+  const fillSVG = `grid place-items-center ${padding} ${rounded} bg-${color}-200 text-${color}-900 dark:bg-${color}-900 dark:text-${color}-50`
+
+  const outlineSVG = `grid place-items-center border-2 ${padding} ${rounded} border-${color}-600 text-${color}-800 dark:border-${color}-300 dark:text-${color}-50`
 
   return (
     <section className="mx-auto max-w-screen-lg p-2">
@@ -57,7 +73,7 @@ export default function LightOnLightDarkOnDark() {
             <div className="py-1 px-4 table-cell align-middle">Text</div>
             <div className="py-1 px-4 table-cell align-middle">
               <div className="flex gap-2 justify-items-center">
-                <button aria-label="Close" className={fillTextButton}>
+                <button aria-label="button" className={fillTextButton}>
                   Button
                 </button>
                 <CopyToClipbaord classes={fillTextButton} />
@@ -65,7 +81,7 @@ export default function LightOnLightDarkOnDark() {
             </div>
             <div className="py-1 px-4 table-cell align-middle">
               <div className="flex gap-2 justify-items-center">
-                <button aria-label="Close" className={OutlineTextButton}>
+                <button aria-label="button" className={OutlineTextButton}>
                   Button
                 </button>
                 <CopyToClipbaord classes={OutlineTextButton} />
@@ -73,7 +89,7 @@ export default function LightOnLightDarkOnDark() {
             </div>
             <div className="py-1 px-4 table-cell align-middle">
               <div className="flex gap-2 justify-items-center">
-                <button aria-label="Close" className={GhostTextButton}>
+                <button aria-label="button" className={GhostTextButton}>
                   Button
                 </button>
                 <CopyToClipbaord classes={GhostTextButton} />
@@ -84,7 +100,7 @@ export default function LightOnLightDarkOnDark() {
             <div className="py-1 px-4 table-cell align-middle">SVG</div>
             <div className="py-1 px-4 table-cell align-middle">
               <div className="flex gap-2 justify-items-center">
-                <button aria-label="Close" className={fillSVGButton}>
+                <button aria-label="button" className={fillSVGButton}>
                   <HiCurrencyDollar className="h-5 w-5" />
                 </button>
                 <CopyToClipbaord classes={fillSVGButton} />
@@ -92,7 +108,7 @@ export default function LightOnLightDarkOnDark() {
             </div>
             <div className="py-1 px-4 table-cell align-middle">
               <div className="flex gap-2 justify-items-center">
-                <button aria-label="Close" className={OutlineSVGButton}>
+                <button aria-label="button" className={OutlineSVGButton}>
                   <HiCurrencyDollar className="h-5 w-5" />
                 </button>
                 <CopyToClipbaord classes={OutlineSVGButton} />
@@ -100,10 +116,52 @@ export default function LightOnLightDarkOnDark() {
             </div>
             <div className="py-1 px-4 table-cell align-middle">
               <div className="flex gap-2 justify-items-center">
-                <button aria-label="Close" className={GhostSVGButton}>
+                <button aria-label="button" className={GhostSVGButton}>
                   <HiCurrencyDollar className="h-5 w-5" />
                 </button>
                 <CopyToClipbaord classes={GhostSVGButton} />
+              </div>
+            </div>
+          </section>
+          {/* ----------------- LABEL (TEXT) -------------------- */}
+          <section className="table-row">
+            <div className="py-1 px-4 table-cell align-middle">
+              Label (Text)
+            </div>
+
+            <div className="py-1 px-4 table-cell align-middle">
+              <div className="flex gap-2 justify-items-center">
+                <p className={fillLabel}>Label</p>
+                <CopyToClipbaord classes={fillLabel} />
+              </div>
+            </div>
+            <div className="py-1 px-4 table-cell align-middle">
+              <div className="flex gap-2 justify-items-center">
+                <p className={outlineLabel}>Label</p>
+                <CopyToClipbaord classes={outlineLabel} />
+              </div>
+            </div>
+          </section>
+
+          {/* --------------- LABEL (TEXT & SVG) ------------------ */}
+          <section className="table-row">
+            <div className="py-1 px-4 table-cell align-middle">Label (SVG)</div>
+
+            <div className="py-1 px-4 table-cell align-middle">
+              <div className="flex gap-2 justify-items-center">
+                <div className={fillSVG}>
+                  <HiOutlineStar className="h-5 w-5" />
+                </div>
+                <CopyToClipbaord classes={fillSVG} />
+              </div>
+            </div>
+
+            <div className="py-1 px-4 table-cell align-middle">
+              <div className="flex gap-2 justify-items-center">
+                <div className={outlineSVG}>
+                  <HiHeart className="h-5 w-5" />
+                </div>
+                <CopyToClipbaord classes={outlineSVG} />
               </div>
             </div>
           </section>
