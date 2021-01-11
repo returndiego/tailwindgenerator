@@ -11,7 +11,7 @@ export default function BorderSelector() {
         <input
           type="range"
           name="border"
-          defaultValue={1}
+          defaultValue={2}
           step={1}
           min={0}
           max={3}

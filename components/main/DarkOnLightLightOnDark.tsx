@@ -13,19 +13,20 @@ export default function LightOnDarkDarkOnLight() {
     rounded,
     padding,
     textTransform,
+    border,
   } = state
 
   // ------------------- BUTTON (TEXT) ----------------------
   const fillTextButton = `select-none transition focus:ring focus:outline-none ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} dark:bg-${color}-200 dark:text-${color}-900 bg-${color}-900 text-${color}-50 dark:hover:bg-${color}-100 hover:bg-${color}-800 focus:ring-${color}-500 dark:focus:bg-${color}-200 focus:bg-${color}-900`
 
-  const OutlineTextButton = `select-none transition focus:ring focus:outline-none border-2 ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} text-${color}-900 dark:border-${color}-600 border-${color}-300 dark:text-${color}-100 dark:hover:bg-${color}-100 hover:bg-${color}-800 dark:hover:text-${color}-900 hover:text-${color}-100 focus:ring-${color}-500 dark:focus:bg-${color}-200 dark:focus:text-${color}-900 focus:text-${color}-100 focus:bg-${color}-900`
+  const OutlineTextButton = `select-none transition focus:ring focus:outline-none ${border} ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} text-${color}-900 dark:border-${color}-600 border-${color}-300 dark:text-${color}-100 dark:hover:bg-${color}-100 hover:bg-${color}-800 dark:hover:text-${color}-900 hover:text-${color}-100 focus:ring-${color}-500 dark:focus:bg-${color}-200 dark:focus:text-${color}-900 focus:text-${color}-100 focus:bg-${color}-900`
 
   const GhostTextButton = `select-none transition focus:ring focus:outline-none ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} text-${color}-900 dark:text-${color}-100 dark:hover:bg-${color}-100 hover:bg-${color}-800 dark:hover:text-${color}-900 hover:text-${color}-100 focus:ring-${color}-500 dark:focus:bg-${color}-200 dark:focus:text-${color}-900 focus:text-${color}-100 focus:bg-${color}-900`
 
   // ------------------- BUTTON (SVG) ----------------------
   const fillSVGButton = `transition focus:ring focus:outline-none ${padding} ${rounded} dark:bg-${color}-200 dark:text-${color}-900 bg-${color}-900 text-${color}-50 dark:hover:bg-${color}-100 hover:bg-${color}-800 focus:ring-${color}-500 dark:focus:bg-${color}-200 focus:bg-${color}-900`
 
-  const OutlineSVGButton = `transition focus:ring focus:outline-none border-2 ${padding} ${rounded} text-${color}-900 dark:border-${color}-600 border-${color}-300 dark:text-${color}-100 dark:hover:bg-${color}-100 hover:bg-${color}-800 dark:hover:text-${color}-900 hover:text-${color}-100 focus:ring-${color}-500 dark:focus:bg-${color}-200 dark:focus:text-${color}-900 focus:text-${color}-100 focus:bg-${color}-900`
+  const OutlineSVGButton = `transition focus:ring focus:outline-none ${border} ${padding} ${rounded} text-${color}-900 dark:border-${color}-600 border-${color}-300 dark:text-${color}-100 dark:hover:bg-${color}-100 hover:bg-${color}-800 dark:hover:text-${color}-900 hover:text-${color}-100 focus:ring-${color}-500 dark:focus:bg-${color}-200 dark:focus:text-${color}-900 focus:text-${color}-100 focus:bg-${color}-900`
 
   const GhostSVGButton = `transition focus:ring focus:outline-none ${padding} ${rounded} text-${color}-900 dark:text-${color}-100 dark:hover:bg-${color}-100 hover:bg-${color}-800 dark:hover:text-${color}-900 hover:text-${color}-100 focus:ring-${color}-500 dark:focus:bg-${color}-200 dark:focus:text-${color}-900 focus:text-${color}-100 focus:bg-${color}-900`
 
@@ -33,13 +34,13 @@ export default function LightOnDarkDarkOnLight() {
 
   const darkFillLabel = `select-none grid place-items-center text-sm ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} bg-${color}-900 text-${color}-50 dark:bg-${color}-200 dark:text-${color}-900`
 
-  const outlineLabel = `select-none grid place-items-center text-sm border-2 transition ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} border-${color}-300 text-${color}-800 dark:border-${color}-600 dark:text-${color}-100`
+  const outlineLabel = `select-none grid place-items-center text-sm ${border} transition ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} border-${color}-300 text-${color}-800 dark:border-${color}-600 dark:text-${color}-100`
 
   // ---------------- LABEL (TEXT & SVG) -------------------
 
   const darkFillSVG = `grid place-items-center ${padding} ${rounded} bg-${color}-900 text-${color}-50 dark:bg-${color}-200 dark:text-${color}-900`
 
-  const outlineSVG = `grid place-items-center border-2 ${padding} ${rounded} border-${color}-300 text-${color}-800 dark:border-${color}-600 dark:text-${color}-100`
+  const outlineSVG = `grid place-items-center ${border} ${padding} ${rounded} border-${color}-300 text-${color}-800 dark:border-${color}-600 dark:text-${color}-100`
 
   return (
     <section className="mx-auto max-w-screen-lg p-2">

@@ -13,31 +13,32 @@ export default function LightOnly() {
     rounded,
     padding,
     textTransform,
+    border,
   } = state
 
   // ------------------- BUTTON (TEXT) ----------------------
   const fillTextButton = `select-none transition focus:outline-none ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} bg-${color}-200 text-${color}-900 focus:ring hover:bg-${color}-100 focus:ring-${color}-500 focus:bg-${color}-200`
 
-  const OutlineTextButton = `select-none border-2 transition focus:outline-none focus:ring ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} border-${color}-600 text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`
+  const OutlineTextButton = `select-none ${border} transition focus:outline-none focus:ring ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} border-${color}-600 text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`
 
   const GhostTextButton = `select-none transition focus:outline-none focus:ring ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`
 
   // ------------------- BUTTON (SVG) ----------------------
   const fillSVGButton = `transition focus:outline-none ${padding} ${rounded} bg-${color}-200 text-${color}-900 focus:ring hover:bg-${color}-100 focus:ring-${color}-500 focus:bg-${color}-200`
 
-  const OutlineSVGButton = `border-2 transition focus:outline-none focus:ring ${padding} ${rounded} border-${color}-600 text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`
+  const OutlineSVGButton = `${border} transition focus:outline-none focus:ring ${padding} ${rounded} border-${color}-600 text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`
 
   const GhostSVGButton = `transition focus:outline-none focus:ring ${padding} ${rounded} text-${color}-900 hover:bg-${color}-100 hover:text-${color}-900 focus:text-${color}-900 focus:ring-${color}-500 focus:bg-${color}-200`
 
   // ------------------- LABEL (TEXT) ----------------------
   const fillLabel = `select-none grid place-items-center text-sm ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} bg-${color}-200 text-${color}-900`
 
-  const outlineLabel = `select-none grid place-items-center text-sm border-2 transition ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} border-${color}-600 text-${color}-800`
+  const outlineLabel = `select-none grid place-items-center text-sm ${border} transition ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} border-${color}-600 text-${color}-800`
 
   // ---------------- LABEL (TEXT & SVG) -------------------
   const fillSVG = `grid place-items-center ${padding} ${rounded} bg-${color}-200 text-${color}-900`
 
-  const outlineSVG = `grid place-items-center border-2 ${padding} ${rounded} border-${color}-600 text-${color}-800`
+  const outlineSVG = `grid place-items-center ${border} ${padding} ${rounded} border-${color}-600 text-${color}-800`
 
   return (
     <section className="mx-auto max-w-screen-lg p-2">
@@ -67,7 +68,9 @@ export default function LightOnly() {
         </header>
         <div className="table-row-group">
           <section className="table-row">
-            <div className="py-1 px-4 table-cell align-middle">Text</div>
+            <div className="py-1 px-4 table-cell align-middle">
+              Button (Text)
+            </div>
             <div className="py-1 px-4 table-cell align-middle">
               <div className="grid grid-flow-col gap-2 place-items-center">
                 <button aria-label="button" className={fillTextButton}>
@@ -94,7 +97,9 @@ export default function LightOnly() {
             </div>
           </section>
           <section className="table-row">
-            <div className="py-1 px-4 table-cell align-middle">SVG</div>
+            <div className="py-1 px-4 table-cell align-middle">
+              Button (SVG)
+            </div>
             <div className="py-1 px-4 table-cell align-middle">
               <div className="flex gap-2 justify-items-center">
                 <button aria-label="button" className={fillSVGButton}>
