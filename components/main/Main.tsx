@@ -50,27 +50,35 @@ export default function Main() {
 
   return (
     <main>
-      <header className="mx-auto max-w-screen-lg p-2">
-        <h1>Handpicked settings to quickly design components</h1>
-        <p>
-          The point is to avoid having too many options. You will also no longer
-          have to check the color contrast!
+      <header className="mx-auto max-w-prose text-center p-2">
+        <p className="text-lg font-medium mt-1">
+          Opinionated TailwindCSS generator for buttons, labels and inputs using
+          some sweet constraints.
         </p>
       </header>
-      <div className="mx-auto max-w-screen-xl p-2">
-        <section className="grid gap-6 md:grid-cols-2">
-          <ColorSelector />
-          <div className="space-y-4 max-w-sm">
-            <BorderSelector />
-            <RoundedSelector />
-            <PaddingYSelector />
-            <TextTransformSelector />
-            <PaddingXSelector />
-            <PaddingSelector />
-            <FontWeightSelector />
+      <section className="mx-auto max-w-screen-lg p-2">
+        <ColorSelector />
+        <div className="mt-3">
+          <header>
+            <h1 className="text-xl font-bold">Selectors</h1>
+          </header>
+          <div className="md:grid md:grid-cols-2 md:gap-3 max-w-screen-md mx-auto">
+            <section className="space-y-3">
+              <BorderSelector />
+              <RoundedSelector />
+              <PaddingYSelector />
+            </section>
+            <section className="space-y-3 mt-3 md:mt-0">
+              <PaddingXSelector />
+              <PaddingSelector />
+              <FontWeightSelector />
+            </section>
           </div>
-        </section>
-      </div>
+          <div className="mt-3">
+            <TextTransformSelector />
+          </div>
+        </div>
+      </section>
       <div className="grid lg:grid-cols-2">
         <LightOnly />
         <DarkOnly />

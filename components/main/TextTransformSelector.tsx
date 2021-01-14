@@ -6,23 +6,21 @@ export default function fontWeightSelector() {
 
   return (
     <section>
-      <label className="block">
-        Text Transform Selector ({state.textTransform})
-        <input
-          type="range"
-          name="textTransform"
-          defaultValue={0}
-          step={1}
-          min={0}
-          max={3}
-          onChange={(e) =>
-            dispatch({
-              type: 'TEXT_TRANSFORM',
-              payload: breakpoints[+e.target.value],
-            })
-          }
-          className="mt-1 w-full rounded-md dark:border-gray-600 dark:bg-gray-900 transition dark:hover:border-gray-400 focus:outline-none focus:border-blue-700 dark:focus:border-blue-400"
-        />
+      <label>
+        <p>Text Transform Selector ({state.textTransform})</p>
+        <div className="flex flex-wrap gap-3 mt-1">
+          {breakpoints.map((transform, idx) => (
+            <button
+              key={idx}
+              className={`${transform} select-none focus:outline-none focus:ring transition border-2 font-medium px-3 py-1 rounded-md border-blue-600 dark:border-blue-300 text-blue-900 dark:text-blue-50 hover:bg-blue-100 dark:hover:bg-blue-800 focus:ring-blue-500 focus:bg-blue-200 dark:focus:bg-blue-900`}
+              onClick={() =>
+                dispatch({ type: 'TEXT_TRANSFORM', payload: transform })
+              }
+            >
+              {transform}
+            </button>
+          ))}
+        </div>
       </label>
     </section>
   )
