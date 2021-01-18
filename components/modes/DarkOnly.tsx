@@ -14,21 +14,22 @@ export default function DarkOnly() {
     padding,
     textTransform,
     border,
+    ring,
   } = state
 
   // ------------------- BUTTON (TEXT) ----------------------
-  const fillTextButton = `select-none transition focus:outline-none ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} bg-${color}-900 text-${color}-50 focus:ring hover:bg-${color}-800 focus:ring-${color}-500 focus:bg-${color}-900`
+  const fillTextButton = `select-none transition focus:outline-none ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} bg-${color}-900 text-${color}-50 focus:${ring} hover:bg-${color}-800 focus:ring-${color}-500 focus:bg-${color}-900`
 
-  const OutlineTextButton = `select-none ${border} transition focus:outline-none focus:ring ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} border-${color}-300 text-${color}-800 hover:bg-${color}-800 hover:text-${color}-50 focus:text-${color}-50 focus:ring-${color}-500 focus:bg-${color}-900`
+  const OutlineTextButton = `select-none ${border} transition focus:outline-none focus:${ring} ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} border-${color}-300 text-${color}-800 hover:bg-${color}-800 hover:text-${color}-50 focus:text-${color}-50 focus:ring-${color}-500 focus:bg-${color}-900`
 
-  const GhostTextButton = `select-none transition focus:outline-none focus:ring ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} text-${color}-800 hover:bg-${color}-800 hover:text-${color}-50 focus:text-${color}-50 focus:ring-${color}-500 focus:bg-${color}-900`
+  const GhostTextButton = `select-none transition focus:outline-none focus:${ring} ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} text-${color}-800 hover:bg-${color}-800 hover:text-${color}-50 focus:text-${color}-50 focus:ring-${color}-500 focus:bg-${color}-900`
 
   // ------------------- BUTTON (SVG) ----------------------
-  const fillSVGButton = `transition focus:outline-none ${padding} ${rounded} bg-${color}-900 text-${color}-50 focus:ring hover:bg-${color}-800 focus:ring-${color}-500 focus:bg-${color}-900`
+  const fillSVGButton = `transition focus:outline-none ${padding} ${rounded} bg-${color}-900 text-${color}-50 focus:${ring} hover:bg-${color}-800 focus:ring-${color}-500 focus:bg-${color}-900`
 
-  const OutlineSVGButton = `${border} transition focus:outline-none focus:ring ${padding} ${rounded} border-${color}-300 text-${color}-800 hover:bg-${color}-800 hover:text-${color}-50 focus:text-${color}-50 focus:ring-${color}-500 focus:bg-${color}-900`
+  const OutlineSVGButton = `${border} transition focus:outline-none focus:${ring} ${padding} ${rounded} border-${color}-300 text-${color}-800 hover:bg-${color}-800 hover:text-${color}-50 focus:text-${color}-50 focus:ring-${color}-500 focus:bg-${color}-900`
 
-  const GhostSVGButton = `transition focus:outline-none focus:ring ${padding} ${rounded} text-${color}-900 hover:bg-${color}-800 hover:text-${color}-50 focus:text-${color}-50 focus:ring-${color}-500 focus:bg-${color}-900`
+  const GhostSVGButton = `transition focus:outline-none focus:${ring} ${padding} ${rounded} text-${color}-900 hover:bg-${color}-800 hover:text-${color}-50 focus:text-${color}-50 focus:ring-${color}-500 focus:bg-${color}-900`
 
   // ------------------- LABEL (TEXT) ----------------------
   const darkFillLabel = `select-none grid place-items-center text-sm ${fontWeight} ${paddingX} ${paddingY} ${textTransform} ${rounded} bg-${color}-900 text-${color}-50`

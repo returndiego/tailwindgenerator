@@ -1,22 +1,25 @@
 import { useContext } from 'react'
 import { GlobalContext } from '../../context/GlobalState'
 
-export default function BorderSelector() {
+export default function fontWeightSelector() {
   const { state, dispatch } = useContext(GlobalContext)
 
   return (
     <section>
       <label className="block">
-        Border Selector ({state.border})
+        Font Weight ({state.fontWeight})
         <input
           type="range"
-          name="border"
-          defaultValue={2}
+          name="fontWeight"
+          defaultValue={1}
           step={1}
           min={0}
-          max={3}
+          max={6}
           onChange={(e) =>
-            dispatch({ type: 'BORDER', payload: breakpoints[+e.target.value] })
+            dispatch({
+              type: 'FONT_WEIGHT',
+              payload: breakpoints[+e.target.value],
+            })
           }
           className="mt-1 w-full rounded-md dark:border-gray-600 dark:bg-gray-900 transition dark:hover:border-gray-400 focus:outline-none focus:border-blue-700 dark:focus:border-blue-400"
         />
@@ -25,4 +28,12 @@ export default function BorderSelector() {
   )
 }
 
-const breakpoints = ['border-0', 'border', 'border-2', 'border-4']
+const breakpoints = [
+  'font-thin',
+  'font-light',
+  'font-normal',
+  'font-medium',
+  'font-semibold',
+  'font-bold',
+  'font-black',
+]

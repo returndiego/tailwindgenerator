@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { GlobalContext } from '../../context/GlobalState'
-import CopyToClipbaord from '../main/CopyToClipboard'
+import CopyToClipbaord from '../modes/CopyToClipboard'
 
 export default function Inputs() {
   const { state } = useContext(GlobalContext)
@@ -13,16 +13,15 @@ export default function Inputs() {
       <section className="space-y-3">
         <div className="flex gap-2">
           <CopyToClipbaord classes={borderInput} />
-          <label className="block font-bold">
-            <p className="mb-1">Input</p>
-            <input
-              type="email"
-              name="email"
-              placeholder="someone@email.com"
-              className={borderInput}
-            />
-          </label>
+          <label>Input</label>
         </div>
+        <input
+          type="email"
+          name="email"
+          aria-label="email"
+          placeholder="someone@email.com"
+          className={borderInput}
+        />
       </section>
     </section>
   )

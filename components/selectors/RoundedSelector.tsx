@@ -6,7 +6,7 @@ export default function RoundedSelector() {
   return (
     <section>
       <label className="block">
-        Rounded Selector ({state.rounded})
+        Rounded ({state.rounded})
         <input
           type="range"
           name="rounded"

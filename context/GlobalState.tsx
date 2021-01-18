@@ -11,6 +11,7 @@ const initialState: State = {
   paddingY: 'py-1',
   fontWeight: 'font-medium',
   textTransform: 'normal-case',
+  ring: 'ring-2',
 }
 
 // The global context becomes a single source of truth

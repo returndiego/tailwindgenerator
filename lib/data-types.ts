@@ -14,6 +14,7 @@ export type Actions = {
     | 'CLIPBOARD'
     | 'BORDER'
     | 'TEXT_TRANSFORM'
+    | 'RING'
   payload?: string
 }
 
@@ -83,4 +84,5 @@ export type State = {
     | 'py-7'
     | 'py-8'
   padding: 'p-0' | 'p-1' | 'p-2' | 'p-3' | 'p-4' | 'p-5' | 'p-6'
+  ring: 'ring-1' | 'ring-2' | 'ring' | 'ring-4' | 'ring-8'
 }

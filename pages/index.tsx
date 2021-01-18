@@ -1,6 +1,6 @@
 import Layout from '../components/Layout'
 import Footer from '../components/Footer'
-import Main from '../components/main/Main'
+import Main from '../components/Main'
 import Nav from '../components/Nav'
 import Head from 'next/head'
 
